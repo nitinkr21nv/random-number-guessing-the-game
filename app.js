@@ -1,41 +1,29 @@
-// // // let par = document.getElementById('para');
-// // // console.log(par);
+const max = prompt("Enter the max number");
 
-// // // par.innerText='hello';
-// // // para.innerText='world'
-// // // console.log(par);
-// // // console.log(para);
-
-
-
-// // // let di = document.getElementsByClassName('a');
-// // // console.log(di);
-// // // di[0].innerText = "hello";
-// // // console.log(di);
-// // let para = document.getElementsByTagName("p");
-// // console.log(para);
-// // para[0].innerText = "hii";
-// // para[1].innerText = "Nitin";
-// // para[2].innerHTML = "<b>Nitin</b>"
+const random = Math.floor(Math.random() * max) + 1;
+console.log(max);
+let guess = prompt("guess the number");
 
 
 
 
-
-// console.log(a)
-
-
-// let para = document.querySelectorAll('.a');
-// console.log(para);
-// para[0].innerText = "hello";
-// para[1].innerText = "Nitin";
-// para[2].innerHTML = "<b>Nitin</b>"
+while(true) {
+    if(guess == "quit") {
+        console.log("user quited");
+        break;
+    } 
 
 
+    if(guess == random) {
+        console.log("you are right! congrats!!" + "random number was", random);
+        break;
+    } else if(guess < random) {
+       guess = prompt("hint: your guess was too small. Please try again");
 
-
-
-
-
+    } else {
+        guess = prompt("hint: your guess was too large. Please try again");
+    }
+    
+}
 
 
